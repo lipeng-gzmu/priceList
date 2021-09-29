@@ -1,0 +1,21 @@
+server:
+  port: 18080
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource # 当前数据源操作类型        
+    driver-class-name: org.gjt.mm.mysql.Driver # mysql驱动包
+    url: jdbc:mysql://47.104.191.158:3306/gamesystem # 数据库名称
+    username: root
+    password: Aa19624
+    dbcp2:
+      min-idle: 5 # 数据库连接池的最小维持连接数
+      max-total: 5 # 最大连接数
+      max-wait-millis: 300  #最大等待时间
+      initial-size: 5 #初始化连接数
+  resources:
+    static-locations: classpath:/templates/,classpath:/static/,classpath:/public/
+  groovy:
+    template:
+      cache: false
+swagger:
+  enable: true
