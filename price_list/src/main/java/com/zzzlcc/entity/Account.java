@@ -1,15 +1,15 @@
 package com.zzzlcc.entity;
 
-public class Accounts {
+public class Account {
     //电话
     private String phone;
     //密码
     private String password;
 
-    public Accounts() {
+    public Account() {
     }
 
-    public Accounts(String phone, String password) {
+    public Account(String phone, String password) {
         this.phone = phone;
         this.password = password;
     }
