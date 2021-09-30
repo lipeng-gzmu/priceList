@@ -1,13 +1,22 @@
 package com.zzzlcc.entity;
 
+import javax.persistence.Column;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Table(name="users")
 public class User {
     //id	int
+    @Id
     private Integer id;
     //name	varchar
+    @Column(name="name")
     private String name;
     //phone	varchar
+    @Column(name="phone")
     private String phone;
     //address	varchar
+    @Column(name = "address")
     private String address;
 
     public User() {

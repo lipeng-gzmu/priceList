@@ -1,9 +1,17 @@
 package com.zzzlcc.entity;
 
+import javax.persistence.Column;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Table(name="accounts")
 public class Account {
     //电话
+    @Id
+    @Column(name = "phone")
     private String phone;
     //密码
+    @Column(name="password")
     private String password;
 
     public Account() {

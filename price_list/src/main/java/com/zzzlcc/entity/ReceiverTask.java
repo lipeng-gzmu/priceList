@@ -1,29 +1,28 @@
 package com.zzzlcc.entity;
 
+import javax.persistence.Column;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Table(name="receiver_task")
 public class ReceiverTask {
 //    id	int
+    @Id
     private Integer id;
 //    user_id	int
-    private User user;
+    @Column(name="user_id")
+    private Integer userId;
 //    task_id	int
-    private Task task;
-
-    @Override
-    public String toString() {
-        return "ReceiverTask{" +
-                "id=" + id +
-                ", user=" + user +
-                ", task=" + task +
-                '}';
-    }
+    @Column(name="task_id")
+    private Integer taskId;
 
     public ReceiverTask() {
     }
 
-    public ReceiverTask(Integer id, User user, Task task) {
+    public ReceiverTask(Integer id, Integer userId, Integer taskId) {
         this.id = id;
-        this.user = user;
-        this.task = task;
+        this.userId = userId;
+        this.taskId = taskId;
     }
 
     public Integer getId() {
@@ -34,19 +33,19 @@ public class ReceiverTask {
         this.id = id;
     }
 
-    public User getUser() {
-        return user;
+    public Integer getUserId() {
+        return userId;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setUserId(Integer userId) {
+        this.userId = userId;
     }
 
-    public Task getTask() {
-        return task;
+    public Integer getTaskId() {
+        return taskId;
     }
 
-    public void setTask(Task task) {
-        this.task = task;
+    public void setTaskId(Integer taskId) {
+        this.taskId = taskId;
     }
 }

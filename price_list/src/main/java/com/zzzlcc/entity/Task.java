@@ -1,53 +1,51 @@
 package com.zzzlcc.entity;
 
+import javax.persistence.Column;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.text.DateFormat;
 import java.util.Date;
 
+@Table(name="tasks")
 public class Task {
 //    id	int
+    @Id
     private Integer id;
 //    title	varchar
+    @Column(name="title")
     private String title;
 //    start_time	datetime
+    @Column(name="start_time")
     private Date startTime;
 //    end_time	datetime
+    @Column(name="end_time")
     private Date endTime;
 //    is_complete	int
+    @Column(name="is_complete")
     private int isComplete;
 //    issue_id	int 发布者
-    private User issue;
+    @Column(name = "issue_id")
+    private Integer issueId;
 //    is_received	int
+    @Column(name="is_received")
     private int isReceived;
 //    describe	varchar
+    @Column(name = "describe")
     private String describe;
 //    award	varchar
+    @Column(name="award")
     private String award;
-
-    @Override
-    public String toString() {
-        return "Task{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                ", startTime=" + startTime +
-                ", endTime=" + endTime +
-                ", isComplete=" + isComplete +
-                ", issue=" + issue +
-                ", isReceived=" + isReceived +
-                ", describe='" + describe + '\'' +
-                ", award='" + award + '\'' +
-                '}';
-    }
 
     public Task() {
     }
 
-    public Task(Integer id, String title, Date startTime, Date endTime, int isComplete, User issue, int isReceived, String describe, String award) {
+    public Task(Integer id, String title, Date startTime, Date endTime, int isComplete, Integer issueId, int isReceived, String describe, String award) {
         this.id = id;
         this.title = title;
         this.startTime = startTime;
         this.endTime = endTime;
         this.isComplete = isComplete;
-        this.issue = issue;
+        this.issueId = issueId;
         this.isReceived = isReceived;
         this.describe = describe;
         this.award = award;
@@ -93,12 +91,12 @@ public class Task {
         this.isComplete = isComplete;
     }
 
-    public User getIssue() {
-        return issue;
+    public Integer getIssueId() {
+        return issueId;
     }
 
-    public void setIssue(User issue) {
-        this.issue = issue;
+    public void setIssueId(Integer issueId) {
+        this.issueId = issueId;
     }
 
     public int getIsReceived() {

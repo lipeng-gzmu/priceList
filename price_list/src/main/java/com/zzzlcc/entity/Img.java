@@ -1,29 +1,29 @@
 package com.zzzlcc.entity;
 
+import javax.persistence.Column;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Table(name="imgs")
 public class Img {
-//    id	int
+    //   id	int
+    @Id
+    @Column(name = "id")
     private Integer id;
-//    img_url	varchar
+    //    img_url	varchar
+    @Column(name = "img_url")
     private String imgUrl;
-//    tid	int
-    private Task task;
+    //    tid	int
+    @Column(name = "tid")
+    private Integer tid;
 
     public Img() {
     }
 
-    public Img(Integer id, String imgUrl, Task task) {
+    public Img(Integer id, String imgUrl, Integer tid) {
         this.id = id;
         this.imgUrl = imgUrl;
-        this.task = task;
-    }
-
-    @Override
-    public String toString() {
-        return "Img{" +
-                "id=" + id +
-                ", imgUrl='" + imgUrl + '\'' +
-                ", task=" + task +
-                '}';
+        this.tid = tid;
     }
 
     public Integer getId() {
@@ -42,11 +42,11 @@ public class Img {
         this.imgUrl = imgUrl;
     }
 
-    public Task getTask() {
-        return task;
+    public Integer getTid() {
+        return tid;
     }
 
-    public void setTask(Task task) {
-        this.task = task;
+    public void setTid(Integer tid) {
+        this.tid = tid;
     }
 }
