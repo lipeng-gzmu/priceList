@@ -1,4 +1,7 @@
 package com.zzzlcc.dao;
 
-public interface AccountDao {
+import com.zzzlcc.entity.Account;
+import tk.mybatis.mapper.common.Mapper;
+
+public interface AccountDao extends Mapper<Account> {
 }
