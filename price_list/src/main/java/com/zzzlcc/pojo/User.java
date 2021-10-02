@@ -1,4 +1,4 @@
-package com.zzzlcc.entity;
+package com.zzzlcc.pojo;
 
 import javax.persistence.Column;
 import javax.persistence.Id;

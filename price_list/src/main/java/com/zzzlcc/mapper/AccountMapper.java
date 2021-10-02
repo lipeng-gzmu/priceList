@@ -1,6 +1,6 @@
 package com.zzzlcc.mapper;
 
-import com.zzzlcc.entity.Account;
+import com.zzzlcc.pojo.Account;
 import tk.mybatis.mapper.common.Mapper;
 
 public interface AccountMapper extends Mapper<Account> {

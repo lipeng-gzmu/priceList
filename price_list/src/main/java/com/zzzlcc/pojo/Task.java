@@ -1,9 +1,8 @@
-package com.zzzlcc.entity;
+package com.zzzlcc.pojo;
 
 import javax.persistence.Column;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import java.text.DateFormat;
 import java.util.Date;
 
 @Table(name = "tasks")

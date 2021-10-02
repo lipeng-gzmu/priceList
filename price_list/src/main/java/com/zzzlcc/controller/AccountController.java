@@ -1,6 +1,6 @@
 package com.zzzlcc.controller;
 
-import com.zzzlcc.entity.Account;
+import com.zzzlcc.pojo.Account;
 import com.zzzlcc.service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;

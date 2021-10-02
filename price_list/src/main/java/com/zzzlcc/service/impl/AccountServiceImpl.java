@@ -1,7 +1,7 @@
 package com.zzzlcc.service.impl;
 
 import com.zzzlcc.mapper.AccountMapper;
-import com.zzzlcc.entity.Account;
+import com.zzzlcc.pojo.Account;
 import com.zzzlcc.service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
