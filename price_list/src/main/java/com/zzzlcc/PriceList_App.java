@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import tk.mybatis.spring.annotation.MapperScan;
 
 @SpringBootApplication
-@MapperScan("com.zzzlcc.dao")
+@MapperScan("com.zzzlcc.mapper")
 public class PriceList_App {
     public static void main(String[] args) {
         SpringApplication.run(PriceList_App.class,args);

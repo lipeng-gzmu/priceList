@@ -1,6 +1,6 @@
 package com.zzzlcc.service.impl;
 
-import com.zzzlcc.dao.AccountDao;
+import com.zzzlcc.mapper.AccountMapper;
 import com.zzzlcc.entity.Account;
 import com.zzzlcc.service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +11,7 @@ import java.util.List;
 @Service
 public class AccountServiceImpl implements AccountService {
     @Autowired
-    private AccountDao accountDao;
+    private AccountMapper accountMapper;
 
     /**
      * 根据账号phone查询账号
@@ -20,7 +20,7 @@ public class AccountServiceImpl implements AccountService {
      */
     @Override
     public Account findById(String phone) {
-        return accountDao.selectByPrimaryKey(phone);
+        return accountMapper.selectByPrimaryKey(phone);
     }
     /**
      * 查询所有
@@ -28,6 +28,6 @@ public class AccountServiceImpl implements AccountService {
      */
     @Override
     public List<Account> findAll() {
-        return accountDao.selectAll();
+        return accountMapper.selectAll();
     }
 }

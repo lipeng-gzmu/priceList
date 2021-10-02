@@ -1,5 +1,5 @@
 server:
-  port: 18080
+  port: 8001
 spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource # 当前数据源操作类型        
