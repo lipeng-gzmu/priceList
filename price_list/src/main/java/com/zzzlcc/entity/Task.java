@@ -6,35 +6,38 @@ import javax.persistence.Table;
 import java.text.DateFormat;
 import java.util.Date;
 
-@Table(name="tasks")
+@Table(name = "tasks")
 public class Task {
-//    id	int
+    //    id	int
     @Id
     private Integer id;
-//    title	varchar
-    @Column(name="title")
+    //    title	varchar
+    @Column(name = "title")
     private String title;
-//    start_time	datetime
-    @Column(name="start_time")
+    //    start_time	datetime
+    @Column(name = "start_time")
     private Date startTime;
-//    end_time	datetime
-    @Column(name="end_time")
+    //    end_time	datetime
+    @Column(name = "end_time")
     private Date endTime;
-//    is_complete	int
-    @Column(name="is_complete")
+    //    is_complete	int
+    @Column(name = "is_complete")
     private int isComplete;
-//    issue_id	int 发布者
+    //    issue_id	int 发布者
     @Column(name = "issue_id")
     private Integer issueId;
-//    is_received	int
-    @Column(name="is_received")
+    //    is_received	int
+    @Column(name = "is_received")
     private int isReceived;
-//    describe	varchar
+    //    describe	varchar
     @Column(name = "describe")
     private String describe;
-//    award	varchar
-    @Column(name="award")
+    //    award	varchar
+    @Column(name = "award")
     private String award;
+
+    @Column(name = "images")
+    private String images;
 
     public Task() {
     }
@@ -121,5 +124,13 @@ public class Task {
 
     public void setAward(String award) {
         this.award = award;
+    }
+
+    public void setImages(String images) {
+        this.images = images;
+    }
+
+    public String getImages() {
+        return images;
     }
 }
